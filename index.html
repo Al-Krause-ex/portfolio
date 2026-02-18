@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Александр - Middle Flutter Developer с 4-летним опытом. Портфолио мобильных приложений: E-commerce, социальные сети, утилиты.">
+    <meta name="keywords" content="Flutter, Mobile Developer, Разработчик, Портфолио, Firebase, flutter_bloc, Александр">
+    <meta name="author" content="Александр">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Александр - Flutter Developer">
+    <meta property="og:description" content="Я Middle Flutter Developer с 4-летним опытом разработки мобильных приложений">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/images/avatar.png">
+    
+    <title>Александр - Flutter Developer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#home" class="nav-logo">Portfolio</a>
+                
+                <!-- Hamburger Button -->
+                <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#about" class="nav-link">Обо мне</a></li>
+                    <li><a href="#projects" class="nav-link">Проекты</a></li>
+                    <li><a href="#contact" class="nav-link">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-image-wrapper">
+                    <img src="./assets/images/avatar.png" alt="Александр - Flutter Developer" class="hero-image">
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-title-gradient">Привет! Меня зовут Александр</span> 
+                    <span class="hero-title-emoji">👋🏻</span>
+                </h1>
+                <p class="hero-subtitle">Middle Flutter Developer с 4-летним опытом разработки мобильных приложений. Специализируюсь на создании качественных и производительных решений.</p>
+                <a href="#projects" class="btn btn-primary">Посмотреть проекты</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🚀</div>
+                    <h3>Опыт</h3>
+                    <p>4 года опыта в разработке на Flutter</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📱</div>
+                    <h3>Проекты</h3>
+                    <p>12+ завершенных проектов различной сложности</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">💼</div>
+                    <h3>Специализация</h3>
+                    <p>E-commerce, социальные сети, утилиты, стартапы</p>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="tech-stack">
+                <h3 class="tech-stack-title">Технический стек</h3>
+                
+                <div class="tech-stack-compact">
+                    <p><strong>Skills:</strong> Mobile architecture, State management, Firebase & REST API integration, Clean Architecture, SOLID, Payment integration, Publishing (RuStore, Google Play, App Store), Code review</p>
+                    
+                    <p><strong>Tech Stack:</strong> Flutter (bloc, MobX, provider, freezed, go_router, dio, hive, shared_preferences, json_serializable, build_runner, equatable, get_it, dartz, local notifications, yandex_map, pdf, geocoder), Firebase (Firestore, Storage, FCM, Crashlytics, Cloud Functions)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Мои проекты</h2>
+            <p class="section-subtitle">Портфолио из 12 завершенных проектов</p>
+            
+            <!-- Filters -->
+            <div class="filters-container">
+                <div class="filters-wrapper">
+                    <div class="filter-group">
+                        <button class="filter-btn" id="roleFilterBtn">
+                            <span class="filter-label">Роль</span>
+                            <span class="filter-value" id="roleFilterValue">Все</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-dropdown" id="roleFilterDropdown">
+                            <label class="filter-option">
+                                <input type="checkbox" value="all" checked data-filter="role">
+                                <span>Все роли</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="author" data-filter="role">
+                                <span>✨ Разработал</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="contributor" data-filter="role">
+                                <span>👥 Работа в команде</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <button class="filter-btn" id="statusFilterBtn">
+                            <span class="filter-label">Статус</span>
+                            <span class="filter-value" id="statusFilterValue">Все</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-dropdown" id="statusFilterDropdown">
+                            <label class="filter-option">
+                                <input type="checkbox" value="all" checked data-filter="status">
+                                <span>Все статусы</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="completed" data-filter="status">
+                                <span>✅ Завершён</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="in-progress" data-filter="status">
+                                <span>🚀 В разработке</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="frozen" data-filter="status">
+                                <span>⏸️ Заморожен</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <button class="filter-btn" id="typeFilterBtn">
+                            <span class="filter-label">Тип проекта</span>
+                            <span class="filter-value" id="typeFilterValue">Все</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-dropdown" id="typeFilterDropdown">
+                            <label class="filter-option">
+                                <input type="checkbox" value="all" checked data-filter="projectType">
+                                <span>Все типы</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="ai" data-filter="projectType">
+                                <span>🤖 AI / ML</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="e-commerce" data-filter="projectType">
+                                <span>🛒 E-commerce</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="education" data-filter="projectType">
+                                <span>🎓 Образование</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="finance" data-filter="projectType">
+                                <span>💰 Финансы</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="Health & Services" data-filter="projectType">
+                                <span>🏥 Здоровье</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="lifestyle" data-filter="projectType">
+                                <span>🧘 Lifestyle</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="medical" data-filter="projectType">
+                                <span>⚕️ Медицина</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="productivity" data-filter="projectType">
+                                <span>✅ Продуктивность</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="social" data-filter="projectType">
+                                <span>👥 Социальные</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="startup" data-filter="projectType">
+                                <span>🚀 Стартапы</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="tools" data-filter="projectType">
+                                <span>🛠️ Инструменты</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="travel" data-filter="projectType">
+                                <span>✈️ Путешествия</span>
+                            </label>
+                            <label class="filter-option">
+                                <input type="checkbox" value="utility" data-filter="projectType">
+                                <span>🔧 Утилиты</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-actions">
+                    <button class="filter-reset" id="filterReset">
+                        <i class="fas fa-times"></i>
+                        <span>Сбросить фильтры</span>
+                    </button>
+                    <div class="filter-count" id="filterCount">
+                        <span id="filteredCount">12</span> из <span id="totalCount">12</span> проектов
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <p class="section-subtitle">Свяжитесь со мной удобным способом</p>
+            
+            <div class="contact-grid">
+                <a href="mailto:k4s.krause@gmail.com" class="contact-card" target="_blank">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="https://t.me/a_krause" class="contact-card" target="_blank">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://www.linkedin.com/in/krausek4s/" class="contact-card" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/Al-Krause-ex" class="contact-card" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Flutter Developer. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <!-- Header Section (Fixed) -->
+            <div class="modal-header-wrapper">
+                <button class="modal-close" id="modalClose">&times;</button>
+                
+                <div class="modal-header-new">
+                    <div class="modal-icon-wrapper">
+                        <div id="modalIconLoader" class="modal-icon-loader skeleton"></div>
+                        <img id="modalSmallIcon" class="modal-small-icon" src="" alt="">
+                    </div>
+                    <div class="modal-title-wrapper">
+                         <h2 id="modalTitle"></h2>
+                         <div id="modalRole" class="modal-role"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scrollable Content -->
+            <div class="modal-scroll-content">
+                <p id="modalDescription"></p>
+                
+                <!-- Screenshots List -->
+                <div id="modalScreenshots" class="modal-screenshots-list"></div>
+                
+                <div class="modal-tech">
+                    <h4>Технологии:</h4>
+                    <div class="tech-tags" id="modalTechStack"></div>
+                </div>
+                
+                <div class="modal-links" id="modalLinks">
+                    <!-- Store links will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Viewer -->
+    <div id="imageViewer" class="image-viewer">
+        <button class="image-viewer-close" id="imageViewerClose">&times;</button>
+        <button class="image-viewer-nav image-viewer-prev" id="imageViewerPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="image-viewer-nav image-viewer-next" id="imageViewerNext"><i class="fas fa-chevron-right"></i></button>
+        <img id="imageViewerImg" src="" alt="Full size image">
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

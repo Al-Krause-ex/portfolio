@@ -1,0 +1,492 @@
+[
+    {
+        "id": 1,
+        "title": "Stargaze",
+        "category": "lifestyle",
+        "role": "contributor",
+        "status": "completed",
+        "projectType": "startup",
+        "shortDescription": "Астрологический сервис для построения натальных карт, ежедневных гороскопов и медитаций",
+        "fullDescription": "Масштабное lifestyle-приложение, объединяющее астрологию, психологию и mind-practices.\n\nМоя роль и задачи в проекте:\n• Разработка и поддержка кроссплатформенного мобильного приложения на Flutter (iOS, Android, Web);\n• Реализация новых фич от идеи до релиза (включая UI, бизнес-логику и интеграцию с API);\n• Исправление багов и оптимизация производительности приложения;\n• Интеграция сторонних сервисов (календари, push-уведомления);\n• Написание и постановка задач для backend-команды (согласование API);\n• Ручное тестирование новых функций, проверка совместимости и пользовательских сценариев;\n• Участие в планировании спринтов, обсуждении архитектурных решений и развитии продукта;\n• Взаимодействие с дизайнером и бэкенд разработчиком.\n\nКлючевые фичи: натальные карты, синастрия, лунный календарь, медитации и ежедневные персональные рекомендации.",
+        "stack": [
+            "MobX",
+            "Provider",
+            "GoRouter",
+            "Push Notifications",
+            "GetIt",
+            "REST API",
+            "Firebase"
+        ],
+        "links": {
+            "playStore": "https://play.google.com/store/apps/details?id=ae.stargaz.app",
+            "appStore": "https://apps.apple.com/au/app/stargaze-birth-chart-astrology/id6449580660"
+        },
+        "appIcon": "./assets/images/projects/stargaze/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/stargaze/s1.webp",
+            "./assets/images/projects/stargaze/s2.webp",
+            "./assets/images/projects/stargaze/s3.webp",
+            "./assets/images/projects/stargaze/s4.webp"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Ябросил",
+        "category": "Health & Services",
+        "role": "author",
+        "status": "completed",
+        "projectType": "Health & Services",
+        "shortDescription": "Мобильное SaaS-приложение для отказа от вредных привычек с прогнозной аналитикой, геймификацией и подписочной моделью монетизации",
+        "fullDescription": "Разработано кроссплатформенное health-приложение для системного отказа от вредных привычек с прогнозной аналитикой и подписочной моделью монетизации.\nРеализованный функционал:\n• трекинг нескольких привычек с расчётом экономии средств и времени в реальном времени;\n• прогнозирование накопленного эффекта (финансы, длительность отказа);\n• гибко настраиваемые повторяющиеся push-уведомления (background execution через Workmanager);\n• геймификация: достижения, прогресс-блоки, визуальные триггеры мотивации;\n• paywall и подписочная модель оплаты через WebView-интеграцию;\n• REST API-интеграция (регистрация, авторизация, JWT, сброс пароля, удаление аккаунта);\n• отдельный модуль прогресса по советам (контент + динамическое отслеживание выполнения);\n• гибкий UI с использованием Slivers;\n• административная панель с аналитикой пользователей;\n• статистика активности пользователей.\n\nАрхитектура построена на BLoC-подходе с реактивным управлением состоянием. Реализована модульная структура с разделением слоёв (presentation / domain / data). Поддержана фоновая работа приложения и точное планирование уведомлений с учётом timezone.",
+        "stack": [
+            "BLoC (flutter_bloc)",
+            "REST API integration (Dio)",
+            "JWT authentication",
+            "Workmanager (background tasks)",
+            "Flutter Local Notifications",
+            "WebView (subscription payments)",
+            "FlChart (analytics & statistics)",
+            "RxDart",
+            "SharedPreferences",
+            "Admin Panel"
+        ],
+        "links": {            
+            "playStore": "https://play.google.com/store/apps/details?id=com.yabrosil.health.yabrosil",
+            "ruStore": "https://www.rustore.ru/catalog/app/com.yabrosil.health.yabrosil"
+        },
+        "appIcon": "./assets/images/projects/yabrosil/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/yabrosil/s1.webp",
+            "./assets/images/projects/yabrosil/s2.webp",
+            "./assets/images/projects/yabrosil/s3.webp",
+            "./assets/images/projects/yabrosil/s4.webp",
+            "./assets/images/projects/yabrosil/s5.webp"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "ИОЦ Содружество",
+        "category": "social",
+        "role": "author",
+        "status": "completed",
+        "projectType": "social",
+        "shortDescription": "Закрытая социальная платформа для детского лагеря с real-time взаимодействием, автоматическим архивированием контента и сервисными модулями бронирования",
+        "fullDescription": "Разработана закрытая социальная платформа для внутреннего взаимодействия участников детского лагеря.\n\nРеализованный функционал:\n• публикация постов с поддержкой комментариев и вложенных веток;\n• лайки постов, комментариев и фотографий;\n• приватные аккаунты (исключение из глобального поиска);\n• добавление в друзья с push-уведомлениями;\n• глобальный поиск пользователей (Algolia);\n• единая лента с возможностью архивирования постов;\n• автоматический перевод активных постов в архив через Cloud Functions Scheduler (ежедневный cron в 00:00);\n• модуль бронирования душевых слотов с отображением доступности;\n• карточный контент (Tinder-like swiper) для лагерных активностей;\n• административная панель для управления пользователями и контентом;\n• аналитика и мониторинг (Crashlytics, Analytics).\n\nАрхитектура построена на реактивной модели с использованием Riverpod и immutable-состояний (Freezed). Backend реализован на Firebase (Auth, Firestore, Storage, Cloud Functions), что позволило обеспечить real-time обновления данных и serverless-автоматизацию бизнес-логики.",
+        "stack": [    
+            "Riverpod (reactive state management)",
+            "Firebase Auth",
+            "Cloud Firestore",
+            "Firebase Storage",
+            "Cloud Functions (Scheduler)",
+            "Algolia Search",
+            "Firebase Messaging",
+            "Freezed (immutable models)",
+            "Infinite Scroll Pagination"
+        ],
+        "links": {
+            "ruStore": "https://www.rustore.ru/catalog/app/com.education.sodruzhestvo",
+            "appStore": "https://apps.apple.com/ru/app/%D0%B8%D0%BE%D1%86-%D1%81%D0%BE%D0%B4%D1%80%D1%83%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE/id6474267279"
+        },
+        "appIcon": "./assets/images/projects/sodruzhestvo/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/sodruzhestvo/s1.webp",
+            "./assets/images/projects/sodruzhestvo/s2.webp",
+            "./assets/images/projects/sodruzhestvo/s3.webp",
+            "./assets/images/projects/sodruzhestvo/s4.webp",
+            "./assets/images/projects/sodruzhestvo/s5.webp"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Инфратест-модуль",
+        "category": "tools",
+        "role": "author",
+        "status": "completed",
+        "projectType": "tools",
+        "shortDescription": "Инженерное приложение для расчёта и аппроксимации профиля дорожного покрытия с генерацией графиков и PDF-отчётов",
+        "fullDescription": "Разработано инженерное мобильное приложение для специалистов по анализу профиля дорожного покрытия.\n\nПользователь вводит измеренные данные уровня дороги в табличной форме, после чего приложение:\n• выполняет аппроксимацию данных методом наименьших квадратов;\n• формирует нормальную систему линейных уравнений;\n• решает её методом Гаусса (реализация алгоритма вручную);\n• вычисляет коэффициенты аппроксимирующего полинома;\n• строит график профиля дороги;\n• формирует PDF-отчёт с результатами расчётов.\n\nАлгоритмическая часть реализована без использования сторонних математических библиотек, что обеспечило полный контроль над вычислительной логикой и точностью.",
+        "stack": [
+            "BLoC",
+            "Custom numerical algorithms (Gauss elimination)",
+            "Polynomial approximation (Least Squares Method)",
+            "FlChart (data visualization)",
+            "PDF generation",
+            "GoRouter"
+        ],
+        "links": {
+            "ruStore": "https://www.rustore.ru/catalog/app/com.infratest.infratest_calculation"            
+        },
+        "appIcon": "./assets/images/projects/infratest/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/infratest/s1.webp",
+            "./assets/images/projects/infratest/s2.webp",
+            "./assets/images/projects/infratest/s3.webp",
+            "./assets/images/projects/infratest/s4.webp"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "QuestMed",
+        "category": "medical",
+        "role": "author",
+        "status": "completed",
+        "projectType": "medical",
+        "shortDescription": "Интерактивный клинический опросник для врачей и студентов медицинских вузов",
+        "fullDescription": "Разработано образовательное медицинское приложение, основанное на действующих клинических рекомендациях.\n\nПриложение реализует интерактивный клинический опросник с множественными сценариями и вариативными ответами, направленный на развитие клинического мышления у врачей и студентов медицинских вузов.\n\nРеализованный функционал:\n• динамическая логика ветвления вопросов в зависимости от выбранных ответов;\n• поддержка различных типов ответов (single choice, multiple choice, сценарные варианты);\n• структурированная модель данных на основе JSON;\n• навигация по клиническому сценарию через go_router;\n• управление состоянием через BLoC;\n• модульная архитектура с разделением бизнес-логики и представления.\n\nПриложение носит исключительно образовательный характер и не предназначено для постановки диагноза.",
+        "stack": [
+            "BLoC",
+            "GoRouter",
+            "JSON-driven architecture",
+            "json_serializable",
+            "Equatable"
+        ],
+        "links": {
+            "ruStore": "https://www.rustore.ru/catalog/app/com.medical.quest_med"
+        },
+        "appIcon": "./assets/images/projects/questmed/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/questmed/s1.webp",
+            "./assets/images/projects/questmed/s2.webp",
+            "./assets/images/projects/questmed/s3.webp",
+            "./assets/images/projects/questmed/s4.webp"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Plazan",
+        "category": "e-commerce",
+        "role": "author",
+        "status": "completed",
+        "projectType": "e-commerce",
+        "shortDescription": "Retail-приложение с интеграцией карт, управлением заказами и локальным кэшированием корзины",
+        "fullDescription": "Разработано мобильное e-commerce приложение с интеграцией кастомного REST API и продуманной архитектурой синхронизации данных.\n\nРеализованный функционал:\n• каталог товаров с поиском, фильтрацией и пагинацией;\n• корзина с локальным кэшированием (Drift) и периодической синхронизацией с backend;\n• анимированная UX-логика добавления в корзину (bouncing);\n• оформление заказа и управление адресами пользователя;\n• интеграция Яндекс.Карт с отображением пунктов выдачи СДЭК и пользовательских адресов;\n• геолокация и расчёт расстояний;\n• push-уведомления (FCM + local notifications);\n• web-админ панель для управления контентом;\n• аналитика и мониторинг (Firebase Analytics, Crashlytics).\n\nАрхитектура построена с использованием BLoC и dependency injection (GetIt). Для офлайн-поддержки и устойчивости к сетевым сбоям реализован слой локального хранения на Drift (SQLite). Синхронизация данных выполняется по таймеру и при ключевых событиях пользовательского взаимодействия.",
+        "stack": [
+            "BLoC",
+            "Dio (REST API)",
+            "Drift (SQLite)",
+            "GetIt (DI)",
+            "Yandex MapKit",
+            "Firebase Messaging",
+            "Firebase Analytics",
+            "Crashlytics"
+        ],
+        "links": {
+            "ruStore": "https://www.rustore.ru/catalog/app/ru.jb.plazan",
+            "playStore": "https://play.google.com/store/apps/details?id=ru.jb.plazan",
+            "appStore": "https://apps.apple.com/ru/app/plazan-cosmetics/id6758047479"
+        },
+        "appIcon": "./assets/images/projects/plazan/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/plazan/s1.webp",
+            "./assets/images/projects/plazan/s2.webp",
+            "./assets/images/projects/plazan/s3.webp",
+            "./assets/images/projects/plazan/s4.webp"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Массаж для здоровья",
+        "category": "Health & Services",
+        "role": "author",
+        "status": "completed",
+        "projectType": "Health & Services",
+        "shortDescription": "Service-booking приложение с динамической системой расписания, абонементами и webview-платежами",
+        "fullDescription": "Выполнен полный рефакторинг и архитектурный rewrite мобильного приложения сервиса массажа.\n\nПриложение реализует:\n• динамическую систему расписаний мастеров (формирование слотов на основе данных backend);\n• онлайн-запись к специалистам с проверкой доступности времени;\n• оформление и управление абонементами и подарочными сертификатами;\n• оплату услуг через WebView-интеграцию платёжной системы;\n• push-уведомления о записях и изменениях статуса;\n• интеграцию карт и навигации до салона;\n• работу с мультимедийным контентом (видео, HTML-контент).\n\nАрхитектура была пересобрана с нуля с использованием BLoC и модульного подхода. Выполнена тесная коммуникация с backend-разработчиком для проектирования API-контрактов и корректной реализации бизнес-логики расписаний и бронирования.",
+        "stack": [
+            "BLoC",
+            "Dio (REST API)",
+            "GoRouter",
+            "WebView (payments)",
+            "Firebase Messaging",
+            "Yandex MapKit",
+            "JSON serializable models"
+        ],
+        "links": {
+            "appStore": "https://apps.apple.com/ru/app/%D0%BC%D0%B0%D1%81%D1%81%D0%B0%D0%B6-%D0%B4%D0%BB%D1%8F-%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D1%8F/id6743363563",
+            "playStore": "https://play.google.com/store/apps/details?id=com.massageforhealth.app"
+        },
+        "appIcon": "./assets/images/projects/massage-health/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/massage-health/s1.webp",
+            "./assets/images/projects/massage-health/s2.webp",
+            "./assets/images/projects/massage-health/s3.webp"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Центр Раз-Два-Три",
+        "category": "education",
+        "role": "author",
+        "status": "completed",
+        "projectType": "education",
+        "shortDescription": "Приложение для просмотра оценок учеников с интеграцией Google Sheets",
+        "fullDescription": "Разработано мобильное приложение для образовательного центра, позволяющее ученикам и преподавателям получать оценки конкретного ученика через поиск по ID. Используются сервисные аккаунты Google для безопасного доступа к Google Sheets, где хранятся оценки. Реализована обработка ошибок, корректное отображение табличных данных и локальное хранение настроек пользователя.",
+        "stack": [
+            "flutter_bloc",
+            "equatable",
+            "gsheets",
+            "data_table_2",
+            "shared_preferences",
+            "go_router",
+            "intl",
+            "flutter_dotenv"
+        ],
+        "links": {
+            "ruStore": "https://www.rustore.ru/catalog/app/com.math123.math123",
+            "appStore": "https://apps.apple.com/il/app/%D1%80%D0%B0%D0%B7-%D0%B4%D0%B2%D0%B0-%D1%82%D1%80%D0%B8/id6739144565"
+        },
+        "appIcon": "./assets/images/projects/raz-dva-tri/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/raz-dva-tri/s1.webp",
+            "./assets/images/projects/raz-dva-tri/s2.webp",
+            "./assets/images/projects/raz-dva-tri/s3.webp"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Дракоша",
+        "category": "e-commerce",
+        "role": "author",
+        "status": "in-progress",
+        "projectType": "e-commerce",
+        "shortDescription": "Интернет-магазин с админ-панелью, облачными функциями и интеграцией ЮKassa",
+        "fullDescription": "Разработано мобильное e-commerce приложение с backend-инфраструктурой на Firebase и Cloud Functions.\n\nРеализованный функционал:\n• каталог товаров с категориями, предложениями и пагинацией;\n• корзина с локальным кэшированием и оформлением заказа;\n• интеграция платежного шлюза ЮKassa через SDK и серверную логику (создание платежей через Cloud Functions + обработка webhook);\n• автоматическая отмена неоплаченных онлайн-заказов через scheduler (периодическая проверка статусов каждые 5 минут);\n• push-уведомления (Firebase Messaging + local notifications);\n• загрузка, сжатие и хранение изображений товаров (Firebase Storage);\n• авторизация пользователей (Firebase Auth);\n• административная панель для управления категориями, товарами, спецпредложениями, клиентами и заказами.\n\nАрхитектура построена на BLoC с использованием dependency injection (GetIt). Модели данных реализованы через Freezed и json_serializable. Бизнес-логика оплаты вынесена в облачные функции, что позволило изолировать чувствительные операции и корректно обрабатывать webhook-уведомления от платежного провайдера. Реализована серверная автоматизация управления статусами заказов для предотвращения зависших неоплаченных транзакций.",
+        "stack": [
+            "BLoC",
+            "Firebase",
+            "ЮKassa",
+            "REST API",
+            "Webhook",
+            "FCM"
+        ],
+        "links": {},
+        "appIcon": "./assets/images/projects/drakosha/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/drakosha/s1.webp",
+            "./assets/images/projects/drakosha/s2.webp",
+            "./assets/images/projects/drakosha/s3.webp",
+            "./assets/images/projects/drakosha/s4.webp"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Aza Coffee",
+        "category": "ai",
+        "role": "author",
+        "status": "in-progress",
+        "projectType": "ai",
+        "shortDescription": "AI-приложение для интерактивных предсказаний с встроенным ML-детектором изображений и системой монетизации.",
+        "fullDescription": "Разработано мобильное AI-приложение с функцией интерактивных предсказаний и общения с искусственным интеллектом. Архитектура построена на Flutter с использованием BLoC и модульного разделения слоёв. Серверная часть реализована на Firebase (Firestore, Cloud Functions, Auth, Storage). Взаимодействие с AI организовано через Cloud Functions, обеспечивающие безопасный прокси-слой.\n\nДополнительно реализован on-device ML-модуль: обучена и интегрирована модель классификации изображений (TensorFlow Lite). Модель используется для валидации пользовательских фотографий перед отправкой в AI-обработку. Инференс выполняется локально на устройстве через tflite_flutter, что снижает нагрузку на сервер и повышает скорость отклика. При несоответствии изображения заданным критериям пользователь получает обработанную ошибку без обращения к backend.\n\nРеализована система монетизации: Stripe, Google Pay, Apple Pay, In-App Purchase с серверной валидацией транзакций. Поддержаны социальные логины, push-уведомления, мультиязычность, история сессий, кэширование и защита API-ключей.",
+        "stack": [
+            "flutter_bloc",
+            "Firebase",
+            "Cloud Functions",
+            "Firestore",
+            "Firebase Auth",
+            "Firebase Messaging",
+            "TensorFlow Lite",
+            "tflite_flutter",
+            "Stripe",
+            "In-App Purchase"
+        ],
+        "links": {},
+        "appIcon": "./assets/images/projects/aza-coffee/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/aza-coffee/s1.webp",
+            "./assets/images/projects/aza-coffee/s2.webp",
+            "./assets/images/projects/aza-coffee/s3.webp",
+            "./assets/images/projects/aza-coffee/s4.webp",
+            "./assets/images/projects/aza-coffee/s5.webp",
+            "./assets/images/projects/aza-coffee/s6.webp"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Glam Gid",
+        "category": "e-commerce",
+        "role": "contributor",
+        "status": "completed",
+        "projectType": "e-commerce",
+        "shortDescription": "Участие в развитии production-приложения: архитектурный рефакторинг, оптимизация производительности и повышение стабильности.",
+        "fullDescription": "Привлечён в проект на стадии активной разработки как Flutter-консультант. Провёл технический аудит кода и архитектуры. Выполнил рефакторинг структуры проекта с приведением к чистой архитектуре и упорядочиванием слоёв (presentation / domain / data). Улучшил производительность экранов со сложной пагинацией и медиа-контентом. Исправил критические баги, снизил количество runtime-ошибок и оптимизировал сетевое взаимодействие.\n\nРаботал с Firebase (Auth, Firestore, Storage), push-уведомлениями, аналитикой, Crashlytics, deep linking, Algolia-поиском, геолокацией и картами (Yandex MapKit). Внедрил улучшения в обработку изображений и видео, оптимизировал загрузку медиа и кэширование.\n\nУчаствовал в код-ревью, давал рекомендации по масштабируемости и поддерживаемости проекта.",
+        "stack": [
+            "flutter_bloc",
+            "Firebase",
+            "Firestore",
+            "Firebase Auth",
+            "Algolia",
+            "Yandex MapKit",
+            "Dio",
+            "Crashlytics"
+        ],
+        "links": {
+            "playStore": "https://play.google.com/store/apps/details?id=com.project.glamjob",
+            "appStore": "https://apps.apple.com/ru/app/glamgid/id6742096282"
+        },
+        "appIcon": "./assets/images/projects/glam-gid/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/glam-gid/s1.webp",
+            "./assets/images/projects/glam-gid/s2.webp",
+            "./assets/images/projects/glam-gid/s3.webp",
+            "./assets/images/projects/glam-gid/s4.webp",
+            "./assets/images/projects/glam-gid/s5.webp"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Зерно BV Русь",
+        "category": "utility",
+        "role": "author",
+        "status": "completed",
+        "projectType": "utility",
+        "shortDescription": "Система учета логистики и трекинга ж/д перевозок",
+        "fullDescription": "Разработано корпоративное приложение для автоматизации логистических процессов и учета перемещения зерновых культур. Ключевой особенностью является динамическая ролевая модель доступа (RBAC): администратор управляет правами пользователей через консоль, открывая доступ к специфическому контенту. Реализован функционал детального трекинга железнодорожных вагонов: контроль объемов загрузки, сроков прибытия и текущего статуса логистической цепочки. Архитектура построена на базе Firebase для синхронизации данных в реальном времени.",
+        "stack": [
+            "Firebase Auth",
+            "Cloud Firestore",
+            "Provider",
+            "GoRouter",
+            "Intl",
+            "Firebase UI"
+        ],
+        "links": {},
+        "appIcon": "./assets/images/projects/zerno/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/zerno/s1.webp",
+            "./assets/images/projects/zerno/s2.webp",
+            "./assets/images/projects/zerno/s3.webp",
+            "./assets/images/projects/zerno/s4.webp"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Carbon",
+        "category": "utility",
+        "role": "author",
+        "status": "completed",
+        "projectType": "utility",
+        "shortDescription": "Система совместной инспекции грузов с генерацией подписанных PDF-отчетов",
+        "fullDescription": "Разработан инструмент для автоматизации сюрвейерских инспекций и составления сводных отчетов по вагонам и морским судам. Реализован сложный сценарий асинхронной совместной работы: распределенная команда вносит данные (метеоусловия, состояние груза, фотофиксация) в единый реестр. Внедрен workflow утверждения: супервайзер валидирует и агрегирует входящие данные. Ключевой особенностью является модуль генерации комплексных PDF-документов «на лету», включающий автоматическую верстку и интеграцию цифровых рукописных подписей всех участников процесса.",
+        "stack": [
+            "BLoC",
+            "Firebase Firestore",
+            "GetIt",
+            "PDF Generation",
+            "Digital Signature",
+            "Image Processing"
+        ],
+        "links": {},
+        "appIcon": "./assets/images/projects/carbon/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/carbon/s1.webp",
+            "./assets/images/projects/carbon/s2.webp",
+            "./assets/images/projects/carbon/s3.webp",
+            "./assets/images/projects/carbon/s4.webp"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Atlas Global",
+        "category": "travel",
+        "role": "author",
+        "status": "completed",
+        "projectType": "travel",
+        "shortDescription": "Агрегатор туристических документов и управление программами туров",
+        "fullDescription": "Разработана комплексная платформа для управления туристическими поездками. Система автоматизирует формирование полного пакета документов: авиабилетов, ваучеров на проживание и информационных писем. Ключевая функциональность включает динамическую генерацию PDF-документов на основе сложных шаблонов (включая обработку HTML-контента) и управление детальной программой тура. Архитектура приложения построена на принципах Clean Architecture с использованием BLoC для управления состоянием и Fpdart для обеспечения типобезопасности и обработки ошибок в функциональном стиле.",
+        "stack": [            
+            "BLoC",
+            "Firebase",
+            "Functional Programming (Fpdart)",
+            "PDF Engine",
+            "HTML Parsing",
+            "GetIt"
+        ],
+        "links": {},
+        "appIcon": "./assets/images/projects/atlas-global/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/atlas-global/s1.webp",
+            "./assets/images/projects/atlas-global/s2.webp",
+            "./assets/images/projects/atlas-global/s3.webp"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Заберу",
+        "category": "lifestyle",
+        "role": "author",
+        "status": "frozen",
+        "projectType": "lifestyle",
+        "shortDescription": "Сервис заказа и оплаты вывоза бытовых отходов",
+        "fullDescription": "Разработано клиентское приложение для Uber-like сервиса в сфере экологической утилизации. Реализован полный цикл заказа: геопозиционирование и выбор адреса на картах (Yandex Maps SDK), планирование графика вывоза и интеграция эквайринга через защищенный WebView. Особенностью проекта стала плотная работа над архитектурой REST API: проектирование эндпоинтов совместно с backend-командой, реализация системы аутентификации (OTP, JWT) и механизмов автоматического заполнения кодов подтверждения.",
+        "stack": [            
+            "BLoC",
+            "Yandex Maps SDK",
+            "REST API (Dio)",
+            "WebView Integration",
+            "JWT / OTP Auth",
+            "Geolocator"
+        ],
+        "links": {},
+        "appIcon": "./assets/images/projects/zaberu/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/zaberu/s1.webp",
+            "./assets/images/projects/zaberu/s2.webp",
+            "./assets/images/projects/zaberu/s3.webp",
+            "./assets/images/projects/zaberu/s4.webp",
+            "./assets/images/projects/zaberu/s5.webp",
+            "./assets/images/projects/zaberu/s6.webp"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "MoneyControl",
+        "category": "finance",
+        "role": "author",
+        "status": "frozen",
+        "projectType": "finance",
+        "shortDescription": "Менеджер личных финансов с аналитикой и экспортом отчетов",
+        "fullDescription": "Приложение для контроля доходов и расходов с глубокой визуализацией данных. Реализована система учета транзакций с привязкой к категориям и временным периодам. Ключевые технические решения: использование библиотеки FL Chart для построения интерактивных графиков, кастомный выбор цветовых схем для категорий и интеграция модуля формирования отчетности в формате Excel. Приложение поддерживает работу в офлайн-режиме с сохранением состояния через Shared Preferences и управляется с помощью BLoC.",
+        "stack": [        
+            "BLoC",
+            "FL Chart (Аналитика)",
+            "Syncfusion (Excel Export)",
+            "Shared Preferences",
+            "Intl"
+        ],
+        "links": {},
+        "appIcon": "./assets/images/projects/moneycontrol/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/moneycontrol/s1.webp",
+            "./assets/images/projects/moneycontrol/s2.webp",
+            "./assets/images/projects/moneycontrol/s3.webp",
+            "./assets/images/projects/moneycontrol/s4.webp",
+            "./assets/images/projects/moneycontrol/s5.webp",
+            "./assets/images/projects/moneycontrol/s6.webp",
+            "./assets/images/projects/moneycontrol/s7.webp",
+            "./assets/images/projects/moneycontrol/s8.webp"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Checklists",
+        "category": "productivity",
+        "role": "author",
+        "status": "frozen",
+        "projectType": "productivity",
+        "shortDescription": "Персонализированный менеджер списков с системой монетизации",
+        "fullDescription": "Минималистичный и гибкий инструмент для создания чек-листов и списков задач. Основной акцент сделан на пользовательском опыте (UX) и кастомизации: внедрен выбор иконок, работа с HEX-цветами и динамическое изменение тем оформления. В приложение интегрирован сервис RevenueCat (Purchases Flutter) для управления подписками и внутриигровыми покупками, что позволило реализовать полноценную Freemium-модель монетизации.",
+        "stack": [        
+            "In-App Purchases",
+            "Custom UI Themes",            
+            "Shared Preferences"
+        ],
+        "links": {},
+        "appIcon": "./assets/images/projects/checklists/icon.webp",
+        "imageUrls": [
+            "./assets/images/projects/checklists/s1.webp",
+            "./assets/images/projects/checklists/s2.webp",
+            "./assets/images/projects/checklists/s3.webp",
+            "./assets/images/projects/checklists/s4.webp"
+        ]
+    }
+]
