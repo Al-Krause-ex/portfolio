@@ -212,7 +212,7 @@ function openModal(projectId, updateHistory = true) {
                 this.classList.add('loaded');
                 // Only enable click if loaded successfully
                 this.addEventListener('click', () => {
-                    openImageViewer(this.src, imageUrls);
+                    openImageViewer(i, imageUrls);
                 });
             };
 
@@ -288,6 +288,12 @@ function openModal(projectId, updateHistory = true) {
     // Show modal
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    // Reset scroll position
+    const scrollContent = modal.querySelector('.modal-scroll-content');
+    if (scrollContent) {
+        scrollContent.scrollTop = 0;
+    }
 
     // Update History
     if (updateHistory) {
@@ -649,6 +655,7 @@ async function init() {
     renderProjects();
     initializeFilters();
     document.getElementById('totalCount').textContent = projects.length;
+    document.getElementById('filteredCount').textContent = projects.length; // Update filtered count initially
     
     // Initialize Scroll Spy
     initScrollSpy();
@@ -675,10 +682,16 @@ const imageViewerNext = document.getElementById('imageViewerNext');
 let currentImageIndex = 0;
 let currentImagesList = [];
 
-function openImageViewer(imageSrc, imagesList = []) {
-    currentImagesList = imagesList.length > 0 ? imagesList : [imageSrc];
-    currentImageIndex = currentImagesList.indexOf(imageSrc);
-    if (currentImageIndex === -1) currentImageIndex = 0;
+function openImageViewer(target, imagesList = []) {
+    currentImagesList = imagesList.length > 0 ? imagesList : [];
+    
+    if (typeof target === 'number') {
+        currentImageIndex = target;
+    } else {
+         // Fallback for string path (though likely won't match due to absolute vs relative)
+         currentImageIndex = currentImagesList.indexOf(target);
+         if (currentImageIndex === -1) currentImageIndex = 0;
+    }
     
     updateImageViewerImage();
     

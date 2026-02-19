@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Резюме — Александр Краузе, Middle Flutter Developer с опытом 3+ лет. Стартапы, фриланс, коммерческие мобильные приложения.">
+    <meta name="keywords" content="Flutter, Mobile Developer, Резюме, CV, Разработчик, Александр Краузе">
+    <meta name="author" content="Александр Краузе">
+    <title>Резюме — Александр Краузе, Flutter Developer</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- CV Styles -->
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="nav-logo">Portfolio</a>
+
+                <!-- Hamburger Button -->
+                <button class="nav-hamburger" id="navHamburger" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#about" class="nav-link">Обо мне</a></li>
+                    <li><a href="index.html#projects" class="nav-link">Проекты</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Контакты</a></li>
+                    <li><a href="cv.html" class="nav-link nav-link--active">Резюме</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- CV Hero -->
+    <section class="cv-hero">
+        <div class="container">
+            <div class="cv-hero-content">
+                <div class="cv-hero-badge">
+                    <i class="fas fa-mobile-alt"></i>
+                    Flutter Developer
+                </div>
+                <h1 class="cv-hero-title">Александр Краузе</h1>
+                <p class="cv-hero-subtitle">Middle Flutter Developer · 3+ года коммерческой разработки</p>
+                <div class="cv-hero-meta">
+                    <span class="cv-meta-item"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                    <span class="cv-meta-item"><i class="fab fa-telegram"></i> <a href="https://t.me/a_krause" target="_blank">@a_krause</a></span>
+                    <span class="cv-meta-item"><i class="fas fa-envelope"></i> <a href="mailto:k4s.krause@gmail.com">k4s.krause@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="cv-section">
+        <div class="container">
+            <h2 class="cv-section-title">
+                <span class="cv-section-icon">💼</span>
+                Опыт работы
+            </h2>
+
+            <div class="cv-timeline">
+
+                <!-- Freelance / ИП (first — more tenure) -->
+                <div class="cv-entry">
+                    <div class="cv-entry-left">
+                        <div class="cv-entry-dot cv-entry-dot--freelance"></div>
+                        <div class="cv-entry-line"></div>
+                    </div>
+                    <div class="cv-entry-card">
+                        <div class="cv-entry-header">
+                            <div class="cv-entry-company-block">
+                                <div class="cv-entry-company-logo cv-entry-company-logo--freelance">
+                                    <span>ИП</span>
+                                </div>
+                                <div>
+                                    <h3 class="cv-entry-company">Фриланс / ИП</h3>
+                                    <span class="cv-entry-type-badge cv-badge--freelance">Самозанятость</span>
+                                </div>
+                            </div>
+                            <div class="cv-entry-period-block">
+                                <span class="cv-entry-period">Февр. 2023 — сейчас</span>
+                                <span class="cv-entry-duration cv-duration--active">~3 года</span>
+                            </div>
+                        </div>
+
+                        <div class="cv-entry-role">
+                            <i class="fas fa-code"></i>
+                            Flutter Developer
+                        </div>
+
+                        <p class="cv-entry-about">
+                            Полный цикл разработки коммерческих мобильных приложений под ключ: от технического анализа
+                            до публикации в сторы. Постоянное взаимодействие с дизайнерами и backend-разработчиками.
+                            20+ успешно сданных проектов, 20+ отзывов на profi.ru.
+                        </p>
+
+                        <ul class="cv-entry-duties">
+                            <li>Разработал полноценную социальную сеть для детского лагеря «ИОЦ Содружество» • посты, лента, комментарии, лайки, приватность, бронирование, push-уведомления, Algolia-поиск, Cloud Functions, Firebase</li>
+                            <li>Построил health-приложение «Ябросил» с аналитикой, геймификацией, подписочной монетизацией и REST API • фоновая работа через Workmanager</li>
+                            <li>Реализовал e-commerce приложение «Plazan» с Яндекс.Картами, офлайн-корзиной (Drift/SQLite), синхронизацией данных и web-админкой</li>
+                            <li>Разработал «Дракоша» • магазин с оплатой через ЮKassa, webhook-обработкой и автоотменой заказов через Firebase Cloud Functions Scheduler</li>
+                            <li>Сделал AI-приложение «Aza Coffee» с TensorFlow Lite (on-device ML), Stripe / Google Pay / Apple Pay, In-App Purchases и серверной валидацией</li>
+                            <li>Разработал «Carbon» • инструмент для сюрвейерских инспекций с командными PDF-отчётами и цифровыми подписями</li>
+                            <li>Вёл постоянное взаимодействие с дизайнером и backend-разработчиком, участвовал в проектировании API-контрактов</li>
+                            <li>Публиковал приложения в Google Play, App Store, RuStore, NashStore, AppGallery</li>
+                        </ul>
+
+                        <!-- Ключевые проекты -->
+                        <div class="cv-projects-grid">
+                            <h4 class="cv-projects-label">Ключевые проекты:</h4>
+                            <div class="cv-projects-list">
+                                <a href="index.html#project-2" class="cv-project-chip">
+                                    <img src="./assets/images/projects/yabrosil/icon.webp" alt="Ябросил" onerror="this.style.display='none'">
+                                    Ябросил
+                                </a>
+                                <a href="index.html#project-3" class="cv-project-chip">
+                                    <img src="./assets/images/projects/sodruzhestvo/icon.webp" alt="Содружество" onerror="this.style.display='none'">
+                                    ИОЦ Содружество
+                                </a>
+                                <a href="index.html#project-6" class="cv-project-chip">
+                                    <img src="./assets/images/projects/plazan/icon.webp" alt="Plazan" onerror="this.style.display='none'">
+                                    Plazan
+                                </a>
+                                <a href="index.html#project-9" class="cv-project-chip">
+                                    <img src="./assets/images/projects/drakosha/icon.webp" alt="Дракоша" onerror="this.style.display='none'">
+                                    Дракоша
+                                </a>
+                                <a href="index.html#project-10" class="cv-project-chip">
+                                    <img src="./assets/images/projects/aza-coffee/icon.webp" alt="Aza Coffee" onerror="this.style.display='none'">
+                                    Aza Coffee
+                                </a>
+                                <a href="index.html#project-13" class="cv-project-chip">
+                                    <img src="./assets/images/projects/carbon/icon.webp" alt="Carbon" onerror="this.style.display='none'">
+                                    Carbon
+                                </a>
+                                <a href="index.html#project-7" class="cv-project-chip">
+                                    <img src="./assets/images/projects/massage-health/icon.webp" alt="Массаж" onerror="this.style.display='none'">
+                                    Массаж для здоровья
+                                </a>
+                                <a href="index.html#project-12" class="cv-project-chip">
+                                    <img src="./assets/images/projects/zerno/icon.webp" alt="Зерно" onerror="this.style.display='none'">
+                                    Зерно BV Русь
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="cv-entry-stack">
+                            <span class="cv-tag">BLoC / Cubit</span>
+                            <span class="cv-tag">Riverpod</span>
+                            <span class="cv-tag">Provider</span>
+                            <span class="cv-tag">GoRouter</span>
+                            <span class="cv-tag">Firebase</span>
+                            <span class="cv-tag">Cloud Functions</span>
+                            <span class="cv-tag">Firestore</span>
+                            <span class="cv-tag">REST API (Dio)</span>
+                            <span class="cv-tag">Yandex Maps</span>
+                            <span class="cv-tag">TensorFlow Lite</span>
+                            <span class="cv-tag">Stripe / IAP</span>
+                            <span class="cv-tag">PDF Generation</span>
+                            <span class="cv-tag">SQLite (Drift)</span>
+                            <span class="cv-tag">Workmanager</span>
+                            <span class="cv-tag">Algolia</span>
+                            <span class="cv-tag">WebView</span>
+                            <span class="cv-tag">GetIt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stargaze -->
+                <div class="cv-entry">
+                    <div class="cv-entry-left">
+                        <div class="cv-entry-dot"></div>
+                        <div class="cv-entry-line"></div>
+                    </div>
+                    <div class="cv-entry-card">
+                        <div class="cv-entry-header">
+                            <div class="cv-entry-company-block">
+                                <div class="cv-entry-company-logo">
+                                    <img src="./assets/images/projects/stargaze/icon.webp" alt="Stargaze" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                                    <div class="cv-entry-company-fallback" style="display:none">⭐</div>
+                                </div>
+                                <div>
+                                    <h3 class="cv-entry-company">Stargaze</h3>
+                                    <span class="cv-entry-type-badge cv-badge--startup">Стартап</span>
+                                </div>
+                            </div>
+                            <div class="cv-entry-period-block">
+                                <span class="cv-entry-period">Сент. 2024 — Авг. 2025</span>
+                                <span class="cv-entry-duration">1 год</span>
+                            </div>
+                        </div>
+
+                        <div class="cv-entry-role">
+                            <i class="fas fa-code"></i>
+                            Flutter Developer
+                        </div>
+
+                        <p class="cv-entry-about">
+                            Масштабный lifestyle-продукт — астрологический сервис с натальными картами, синастрией, медитациями и персональными рекомендациями.
+                            Кроссплатформенное приложение для iOS, Android и Web.
+                        </p>
+
+                        <ul class="cv-entry-duties">
+                            <li>Разрабатывал и выпускал новые фичи по всему стеку • от UI-компонента до интеграции с API</li>
+                            <li>Согласовывал контракты с backend-командой: проектировал эндпоинты, описывал требования, принимал изменения</li>
+                            <li>Интегрировал сторонние сервисы: push-уведомления, календарные провайдеры, аналитику</li>
+                            <li>Участвовал в планировании спринтов и обсуждении архитектурных решений</li>
+                            <li>Проводил ручное тестирование по пользовательским сценариям, отлавливал edge-кейсы</li>
+                            <li>Оптимизировал производительность экранов, устранял узкие места</li>
+                        </ul>
+
+                        <div class="cv-entry-stack">
+                            <span class="cv-tag">MobX</span>
+                            <span class="cv-tag">Provider</span>
+                            <span class="cv-tag">GoRouter</span>
+                            <span class="cv-tag">GetIt</span>
+                            <span class="cv-tag">REST API</span>
+                            <span class="cv-tag">Firebase</span>
+                            <span class="cv-tag">Push Notifications</span>
+                        </div>
+
+                        <div class="cv-entry-links">
+                            <a href="https://play.google.com/store/apps/details?id=ae.stargaz.app" target="_blank" class="cv-store-link">
+                                <i class="fab fa-google-play"></i> Google Play
+                            </a>
+                            <a href="https://apps.apple.com/au/app/stargaze-birth-chart-astrology/id6449580660" target="_blank" class="cv-store-link">
+                                <i class="fab fa-apple"></i> App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="cv-section cv-section--alt">
+        <div class="container">
+            <h2 class="cv-section-title">
+                <span class="cv-section-icon">🛠</span>
+                Навыки
+            </h2>
+
+            <div class="cv-skills-grid">
+                <div class="cv-skill-card">
+                    <div class="cv-skill-card-icon">📐</div>
+                    <h3>Архитектура</h3>
+                    <ul>
+                        <li>Clean Architecture</li>
+                        <li>SOLID</li>
+                        <li>BLoC / Cubit</li>
+                        <li>MobX, Riverpod</li>
+                        <li>Feature-first структура</li>
+                    </ul>
+                </div>
+                <div class="cv-skill-card">
+                    <div class="cv-skill-card-icon">🔗</div>
+                    <h3>Интеграции</h3>
+                    <ul>
+                        <li>REST API / GraphQL</li>
+                        <li>Firebase (Auth, Firestore, Storage, FCM, Crashlytics, Remote Config, Cloud Functions)</li>
+                        <li>Платёжные системы</li>
+                        <li>Карты (Yandex, Google)</li>
+                        <li>Push-уведомления (FCM)</li>
+                    </ul>
+                </div>
+                <div class="cv-skill-card">
+                    <div class="cv-skill-card-icon">🚀</div>
+                    <h3>Публикация</h3>
+                    <ul>
+                        <li>Google Play</li>
+                        <li>App Store</li>
+                        <li>RuStore / NashStore</li>
+                        <li>AppGallery</li>
+                        <li>Firebase Hosting (PWA)</li>
+                    </ul>
+                </div>
+                <div class="cv-skill-card">
+                    <div class="cv-skill-card-icon">👥</div>
+                    <h3>Команда</h3>
+                    <ul>
+                        <li>Работа с дизайнером</li>
+                        <li>Согласование API с backend</li>
+                        <li>Agile / Scrum-спринты</li>
+                        <li>Code review</li>
+                        <li>Постановка задач</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Flutter Developer. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="cvProjectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header-wrapper">
+                <button class="modal-close" id="cvModalClose">&times;</button>
+                <div class="modal-header-new">
+                    <div class="modal-icon-wrapper">
+                        <div id="cvModalIconLoader" class="modal-icon-loader skeleton"></div>
+                        <img id="cvModalSmallIcon" class="modal-small-icon" src="" alt="">
+                    </div>
+                    <div class="modal-title-wrapper">
+                        <h2 id="cvModalTitle"></h2>
+                        <div id="cvModalRole" class="modal-role"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-scroll-content">
+                <p id="cvModalDescription"></p>
+                <div id="cvModalScreenshots" class="modal-screenshots-list"></div>
+                <div class="modal-tech">
+                    <h4>Технологии:</h4>
+                    <div class="tech-tags" id="cvModalTechStack"></div>
+                </div>
+                <div class="modal-links" id="cvModalLinks"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Viewer -->
+    <div id="cvImageViewer" class="image-viewer">
+        <button class="image-viewer-close" id="cvImgClose">&times;</button>
+        <button class="image-viewer-nav image-viewer-prev" id="cvImgPrev"><i class="fas fa-chevron-left"></i></button>
+        <button class="image-viewer-nav image-viewer-next" id="cvImgNext"><i class="fas fa-chevron-right"></i></button>
+        <img id="cvImgSrc" src="" alt="Full size image">
+    </div>
+
+    <script>
+        // ── Hamburger ─────────────────────────────────────────────
+        const hamburger = document.getElementById('navHamburger');
+        const navMenu   = document.getElementById('navMenu');
+        const overlay   = document.getElementById('navOverlay');
+
+        function toggleMenu(open) {
+            hamburger.classList.toggle('active', open);
+            navMenu.classList.toggle('active', open);
+            overlay.classList.toggle('active', open);
+            document.body.style.overflow = open ? 'hidden' : '';
+        }
+        hamburger.addEventListener('click', () => toggleMenu(!navMenu.classList.contains('active')));
+        overlay.addEventListener('click',   () => toggleMenu(false));
+        navMenu.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+        window.addEventListener('scroll', () => {
+            document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ── Image Viewer ──────────────────────────────────────────
+        let _imgs = [], _idx = 0;
+
+        function openViewer(i, imgs) {
+            _imgs = imgs; _idx = i;
+            document.getElementById('cvImgSrc').src = imgs[i];
+            document.getElementById('cvImageViewer').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            const show = imgs.length > 1;
+            document.getElementById('cvImgPrev').style.display = show ? 'flex' : 'none';
+            document.getElementById('cvImgNext').style.display = show ? 'flex' : 'none';
+        }
+        function closeViewer() {
+            document.getElementById('cvImageViewer').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.getElementById('cvImgClose').onclick = closeViewer;
+        document.getElementById('cvImageViewer').onclick = e => { if (e.target.id === 'cvImageViewer') closeViewer(); };
+        document.getElementById('cvImgPrev').onclick = () => { _idx = (_idx - 1 + _imgs.length) % _imgs.length; document.getElementById('cvImgSrc').src = _imgs[_idx]; };
+        document.getElementById('cvImgNext').onclick = () => { _idx = (_idx + 1) % _imgs.length; document.getElementById('cvImgSrc').src = _imgs[_idx]; };
+
+        // ── Projects modal ────────────────────────────────────────
+        let cvProjects = [];
+
+        async function loadCvProjects() {
+            try { cvProjects = await (await fetch('./data/projects.json')).json(); }
+            catch(e) { console.error('cv: cannot load projects', e); }
+        }
+
+        function openCvModal(projectId, push = true) {
+            const p = cvProjects.find(x => x.id === projectId);
+            if (!p) return;
+
+            const roles   = { author:{ text:'Разработал проект', icon:'✨', color:'#0066FF' }, contributor:{ text:'Работа в команде', icon:'👥', color:'#00D4FF' }, maintainer:{ text:'Работа в команде', icon:'👥', color:'#00D4FF' } };
+            const statuses= { completed:{ text:'Завершён', icon:'✅', color:'#10B981' }, 'in-progress':{ text:'В процессе', icon:'🚧', color:'#F59E0B' }, frozen:{ text:'Заморожен', icon:'❄️', color:'#3B82F6' } };
+            const r = roles[p.role] || roles.author;
+            const s = statuses[p.status] || statuses.completed;
+
+            document.getElementById('cvModalTitle').textContent = p.title;
+
+            const loader = document.getElementById('cvModalIconLoader');
+            const icon   = document.getElementById('cvModalSmallIcon');
+            loader.style.display = 'block'; icon.classList.remove('loaded');
+            icon.src = p.appIcon || '';
+            icon.onload  = () => { loader.style.display='none'; icon.classList.add('loaded'); };
+            icon.onerror = () => { loader.style.display='none'; icon.classList.add('loaded'); };
+
+            document.getElementById('cvModalRole').innerHTML = `
+                <div class="modal-meta-row">
+                    <div class="modal-meta-item"><span class="role-icon">${r.icon}</span><span class="role-text" style="color:${r.color}">${r.text}</span></div>
+                    ${p.status !== 'completed' ? `<div class="modal-meta-item"><span class="role-icon">${s.icon}</span><span class="role-text" style="color:${s.color}">${s.text}</span></div>` : ''}
+                </div>`;
+
+            document.getElementById('cvModalDescription').textContent = p.fullDescription;
+
+            // Screenshots
+            const ss = document.getElementById('cvModalScreenshots');
+            ss.innerHTML = '';
+            const imgs = p.imageUrls && p.imageUrls.length ? p.imageUrls : [];
+            imgs.forEach((url, i) => {
+                const wrap = document.createElement('div');
+                wrap.className = 'modal-screenshot-wrapper';
+                const ld = document.createElement('div'); ld.className = 'modal-screenshot-loader skeleton';
+                const img = document.createElement('img');
+                img.className = 'modal-screenshot'; img.loading = 'lazy'; img.alt = `${p.title} ${i+1}`;
+                img.onload  = function() { ld.style.display='none'; this.classList.add('loaded'); this.onclick = () => openViewer(i, imgs); };
+                img.onerror = function() { ld.style.display='none'; this.classList.add('error'); };
+                img.src = url;
+                wrap.appendChild(ld); wrap.appendChild(img); ss.appendChild(wrap);
+            });
+
+            // Stack
+            document.getElementById('cvModalTechStack').innerHTML = p.stack.map(t => `<span class="tech-tag">${t}</span>`).join('');
+
+            // Links
+            const lk = document.getElementById('cvModalLinks');
+            const hasLinks = p.links && Object.keys(p.links).length > 0;
+            if (hasLinks) {
+                let h = '';
+                if (p.links.appStore)  h += `<a href="${p.links.appStore}"  class="store-link" target="_blank"><i class="fab fa-apple"></i><span>App Store</span></a>`;
+                if (p.links.playStore) h += `<a href="${p.links.playStore}" class="store-link" target="_blank"><i class="fab fa-google-play"></i><span>Google Play</span></a>`;
+                if (p.links.ruStore)   h += `<a href="${p.links.ruStore}"   class="store-link rustore" target="_blank"><i class="fas fa-cube"></i><span>RuStore</span></a>`;
+                lk.innerHTML = h;
+            } else {
+                lk.innerHTML = `<div class="store-link disabled" style="opacity:.7;cursor:default"><i class="fas fa-eye-slash"></i><span>Не опубликовано</span></div>`;
+            }
+
+            // Show
+            const modal = document.getElementById('cvProjectModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            modal.querySelector('.modal-scroll-content').scrollTop = 0;
+
+            if (push) history.pushState(null, null, `#project-${projectId}`);
+        }
+
+        function closeCvModal(updateHistory = true) {
+            document.getElementById('cvProjectModal').classList.remove('active');
+            document.body.style.overflow = '';
+            if (updateHistory) history.pushState(null, null, window.location.pathname);
+        }
+
+        document.getElementById('cvModalClose').onclick = () => closeCvModal(true);
+        document.getElementById('cvProjectModal').onclick = e => { if (e.target.id === 'cvProjectModal') closeCvModal(true); };
+        document.addEventListener('keydown', e => {
+            if (e.key !== 'Escape') return;
+            if (document.getElementById('cvImageViewer').classList.contains('active')) { closeViewer(); }
+            else { closeCvModal(true); }
+        });
+
+        // Hash routing
+        function handleHash() {
+            const hash = window.location.hash;
+            if (hash.startsWith('#project-') && cvProjects.length) {
+                openCvModal(parseInt(hash.replace('#project-', '')), false);
+            } else if (document.getElementById('cvProjectModal').classList.contains('active')) {
+                closeCvModal(false);
+            }
+        }
+
+        // Wire chips on click (prevent default navigation)
+        function initChips() {
+            document.querySelectorAll('.cv-project-chip').forEach(chip => {
+                chip.addEventListener('click', e => {
+                    e.preventDefault();
+                    const href = chip.getAttribute('href') || '';
+                    const match = href.match(/#project-(\d+)/);
+                    if (match) openCvModal(parseInt(match[1]));
+                });
+            });
+        }
+
+        loadCvProjects().then(() => {
+            initChips();
+            if (window.location.hash) handleHash();
+        });
+
+        window.addEventListener('hashchange', handleHash);
+        window.addEventListener('popstate',   handleHash);
+    </script>
+</body>
+</html>
