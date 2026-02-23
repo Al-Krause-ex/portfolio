@@ -47,6 +47,7 @@
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#about" class="nav-link">Обо мне</a></li>
                     <li><a href="#projects" class="nav-link">Проекты</a></li>
+                    <li><a href="#reviews" class="nav-link">Отзывы</a></li>
                     <li><a href="#contact" class="nav-link">Контакты</a></li>
                     <li><a href="cv/" class="nav-link">Резюме</a></li>
                 </ul>
@@ -251,6 +252,18 @@
         </div>
     </section>
 
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">Отзывы</h2>
+            <p class="section-subtitle">Что говорят заказчики и коллеги</p>
+            
+            <div class="reviews-grid" id="reviewsGrid">
+                <!-- Reviews will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
@@ -329,6 +342,29 @@
         <button class="image-viewer-nav image-viewer-prev" id="imageViewerPrev"><i class="fas fa-chevron-left"></i></button>
         <button class="image-viewer-nav image-viewer-next" id="imageViewerNext"><i class="fas fa-chevron-right"></i></button>
         <img id="imageViewerImg" src="" alt="Full size image">
+    </div>
+
+    <!-- Review Modal -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content review-modal-content">
+            <div class="modal-header-wrapper">
+                <button class="modal-close" id="reviewModalClose">&times;</button>
+                <div class="review-modal-header">
+                    <div class="review-avatar" id="reviewModalAvatar">A</div>
+                    <div class="review-meta">
+                        <h3 id="reviewModalName" class="review-name">Name</h3>
+                        <div id="reviewModalStars" class="review-stars"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-scroll-content">
+                <div class="review-quote-wrapper">
+                    <i class="fas fa-quote-left quote-icon-left"></i>
+                    <p id="reviewModalText" class="review-modal-text"></p>
+                    <i class="fas fa-quote-right quote-icon-right"></i>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Scripts -->

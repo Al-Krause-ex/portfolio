@@ -21,6 +21,8 @@
             "playStore": "https://play.google.com/store/apps/details?id=ae.stargaz.app",
             "appStore": "https://apps.apple.com/au/app/stargaze-birth-chart-astrology/id6449580660"
         },
+        "rating": "4.5",
+        "downloads": "10K+",
         "appIcon": "./assets/images/projects/stargaze/icon.webp",
         "imageUrls": [
             "./assets/images/projects/stargaze/s1.webp",
@@ -55,6 +57,8 @@
             "ruStore": "https://www.rustore.ru/catalog/app/com.yabrosil.health.yabrosil"
         },
         "appIcon": "./assets/images/projects/yabrosil/icon.webp",
+        "rating": "4.8",
+        "downloads": "10K+",
         "imageUrls": [
             "./assets/images/projects/yabrosil/s1.webp",
             "./assets/images/projects/yabrosil/s2.webp",
@@ -87,6 +91,8 @@
             "ruStore": "https://www.rustore.ru/catalog/app/com.education.sodruzhestvo",
             "appStore": "https://apps.apple.com/ru/app/%D0%B8%D0%BE%D1%86-%D1%81%D0%BE%D0%B4%D1%80%D1%83%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%BE/id6474267279"
         },
+        "rating": "5",
+        "downloads": "1K+",
         "appIcon": "./assets/images/projects/sodruzhestvo/icon.webp",
         "imageUrls": [
             "./assets/images/projects/sodruzhestvo/s1.webp",
@@ -115,7 +121,8 @@
         ],
         "links": {
             "ruStore": "https://www.rustore.ru/catalog/app/com.infratest.infratest_calculation"            
-        },
+        },        
+        "downloads": "100+",
         "appIcon": "./assets/images/projects/infratest/icon.webp",
         "imageUrls": [
             "./assets/images/projects/infratest/s1.webp",
@@ -143,6 +150,7 @@
         "links": {
             "ruStore": "https://www.rustore.ru/catalog/app/com.medical.quest_med"
         },
+        "downloads": "100+",
         "appIcon": "./assets/images/projects/questmed/icon.webp",
         "imageUrls": [
             "./assets/images/projects/questmed/s1.webp",
@@ -174,6 +182,7 @@
             "playStore": "https://play.google.com/store/apps/details?id=ru.jb.plazan",
             "appStore": "https://apps.apple.com/ru/app/plazan-cosmetics/id6758047479"
         },
+        "downloads": "100+",
         "appIcon": "./assets/images/projects/plazan/icon.webp",
         "imageUrls": [
             "./assets/images/projects/plazan/s1.webp",
@@ -204,6 +213,8 @@
             "appStore": "https://apps.apple.com/ru/app/%D0%BC%D0%B0%D1%81%D1%81%D0%B0%D0%B6-%D0%B4%D0%BB%D1%8F-%D0%B7%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D1%8C%D1%8F/id6743363563",
             "playStore": "https://play.google.com/store/apps/details?id=com.massageforhealth.app"
         },
+        "rating":"5",  
+        "downloads": "500+",
         "appIcon": "./assets/images/projects/massage-health/icon.webp",
         "imageUrls": [
             "./assets/images/projects/massage-health/s1.webp",
@@ -234,6 +245,8 @@
             "ruStore": "https://www.rustore.ru/catalog/app/com.math123.math123",
             "appStore": "https://apps.apple.com/il/app/%D1%80%D0%B0%D0%B7-%D0%B4%D0%B2%D0%B0-%D1%82%D1%80%D0%B8/id6739144565"
         },
+        "rating":"5",  
+        "downloads": "100+",
         "appIcon": "./assets/images/projects/raz-dva-tri/icon.webp",
         "imageUrls": [
             "./assets/images/projects/raz-dva-tri/s1.webp",
@@ -259,7 +272,8 @@
             "FCM"
         ],
         "links": {},
-        "appIcon": "./assets/images/projects/drakosha/icon.webp",
+        "appIcon": "./assets/images/projects/drakosha/icon.webp",        
+        "downloads": "100+",
         "imageUrls": [
             "./assets/images/projects/drakosha/s1.webp",
             "./assets/images/projects/drakosha/s2.webp",
@@ -322,6 +336,8 @@
             "playStore": "https://play.google.com/store/apps/details?id=com.project.glamjob",
             "appStore": "https://apps.apple.com/ru/app/glamgid/id6742096282"
         },
+        "rating":"5",  
+        "downloads": "100+",
         "appIcon": "./assets/images/projects/glam-gid/icon.webp",
         "imageUrls": [
             "./assets/images/projects/glam-gid/s1.webp",

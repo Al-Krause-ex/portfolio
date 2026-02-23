@@ -1,5 +1,6 @@
 // Projects Data
 let projects = [];
+let reviews = [];
 
 // Load projects from JSON file
 async function loadProjects() {
@@ -18,6 +19,22 @@ async function loadProjects() {
     }
 }
 
+
+// Load reviews from JSON file
+async function loadReviews() {
+    try {
+        const response = await fetch('./data/reviews.json');
+        if (!response.ok) {
+            throw new Error('Failed to load reviews data');
+        }
+        reviews = await response.json();
+        return reviews;
+    } catch (error) {
+        console.error('Error loading reviews:', error);
+        reviews = [];
+        return reviews;
+    }
+}
 
 // Render Projects
 function renderProjects() {
@@ -70,7 +87,28 @@ function renderProjects() {
             
             storeLinksHTML += '</div>';
         }
-        
+        let statsHTML = '';
+        if (project.rating || project.downloads) {
+            statsHTML = '<div class="project-stats-badges">';
+            if (project.rating) {
+                statsHTML += `
+                    <div class="stat-badge" title="Рейтинг">
+                        <i class="fas fa-star" style="color: #FFB800;"></i>
+                        <span>${project.rating}</span>
+                    </div>
+                `;
+            }
+            if (project.downloads) {
+                statsHTML += `
+                    <div class="stat-badge" title="Скачиваний">
+                        <i class="fas fa-users" style="color: #10B981;"></i>
+                        <span>${project.downloads}</span>
+                    </div>
+                `;
+            }
+            statsHTML += '</div>';
+        }
+
         projectCard.innerHTML = `
             <div class="project-icon-wrapper">
                 <div class="icon-loader"></div>
@@ -90,7 +128,10 @@ function renderProjects() {
                     </div>
                 </div>
                 <p class="project-description">${project.shortDescription}</p>
-                ${storeLinksHTML}
+                <div class="project-bottom-actions">
+                    ${storeLinksHTML}
+                    ${statsHTML}
+                </div>
             </div>
         `;
         
@@ -101,6 +142,52 @@ function renderProjects() {
     });
     
     console.log('Projects rendered successfully');
+}
+
+// Render Reviews
+function renderReviews() {
+    const reviewsGrid = document.getElementById('reviewsGrid');
+    if (!reviewsGrid) return;
+    
+    reviewsGrid.innerHTML = '';
+    
+    // Sort reviews by ID descending
+    const sortedReviews = [...reviews].sort((a, b) => b.id - a.id);
+    
+    sortedReviews.forEach(review => {
+        const reviewCard = document.createElement('div');
+        reviewCard.className = 'review-card clickable';
+        reviewCard.onclick = () => openReviewModal(review);
+        
+        let starsHtml = '';
+        for (let i = 0; i < 5; i++) {
+            if (i < review.score) {
+                starsHtml += '<i class="fas fa-star active"></i>';
+            } else {
+                starsHtml += '<i class="fas fa-star"></i>';
+            }
+        }
+
+        reviewCard.innerHTML = `
+            <div class="review-header">
+                <div class="review-author">
+                    <div class="review-avatar">
+                        ${review.name.charAt(0)}
+                    </div>
+                    <div class="review-meta">
+                        <h4 class="review-name">${review.name}</h4>
+                        <div class="review-stars">
+                            ${starsHtml}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="review-text">"${review.text}"</p>
+            <div class="review-read-more">Читать отзыв полностью <i class="fas fa-arrow-right"></i></div>
+        `;
+        
+        reviewsGrid.appendChild(reviewCard);
+    });
 }
 
 // Modal functionality
@@ -157,19 +244,43 @@ function openModal(projectId, updateHistory = true) {
     }
     
     // Set Role and Status
-    modalRole.innerHTML = `
+    let metaHtml = `
         <div class="modal-meta-row">
             <div class="modal-meta-item">
                 <span class="role-icon">${roleInfo.icon}</span>
                 <span class="role-text" style="color: ${roleInfo.color}">${roleInfo.text}</span>
             </div>
-            ${project.status !== 'completed' ? `
+    `;
+
+    if (project.status !== 'completed') {
+        metaHtml += `
             <div class="modal-meta-item">
                  <span class="role-icon">${statusInfo.icon}</span>
                  <span class="role-text" style="color: ${statusInfo.color}">${statusInfo.text}</span>
-            </div>` : ''}
-        </div>
-    `;
+            </div>
+        `;
+    }
+
+    if (project.rating) {
+        metaHtml += `
+            <div class="modal-meta-item">
+                 <span class="role-icon"><i class="fas fa-star" style="color: #FFB800;"></i></span>
+                 <span class="role-text" style="color: #FFB800">${project.rating}</span>
+            </div>
+        `;
+    }
+
+    if (project.downloads) {
+        metaHtml += `
+            <div class="modal-meta-item">
+                 <span class="role-icon"><i class="fas fa-users" style="color: #10B981;"></i></span>
+                 <span class="role-text" style="color: #10B981">${project.downloads}</span>
+            </div>
+        `;
+    }
+    
+    metaHtml += `</div>`;
+    modalRole.innerHTML = metaHtml;
     
     // Set Description
     modalDescription.textContent = project.fullDescription;
@@ -310,11 +421,38 @@ function closeModal(updateHistory = true) {
 
     // Update History: Revert to #projects or clear
     if (updateHistory) {
-        // Use replaceState to avoid cluttering history with modal open/close if desired, 
-        // but pushState is better for "Back" button behavior support.
-        // However, user asked to "remove #project-ID".
-        // Setting it to #projects makes sense as context.
         history.pushState(null, null, '#projects');
+    }
+}
+
+// Review Modal functionality
+function openReviewModal(review) {
+    const modal = document.getElementById('reviewModal');
+    if (!modal) return;
+    
+    document.getElementById('reviewModalAvatar').textContent = review.name.charAt(0);
+    document.getElementById('reviewModalName').textContent = review.name;
+    document.getElementById('reviewModalText').textContent = review.text;
+    
+    let starsHtml = '';
+    for (let i = 0; i < 5; i++) {
+        if (i < review.score) {
+            starsHtml += '<i class="fas fa-star active"></i>';
+        } else {
+            starsHtml += '<i class="fas fa-star"></i>';
+        }
+    }
+    document.getElementById('reviewModalStars').innerHTML = starsHtml;
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeReviewModal() {
+    const modal = document.getElementById('reviewModal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
     }
 }
 
@@ -446,6 +584,11 @@ function handleHashChange() {
     if (modal && modal.classList.contains('active')) {
         closeModal(false);
     }
+    
+    const reviewModal = document.getElementById('reviewModal');
+    if (reviewModal && reviewModal.classList.contains('active')) {
+        closeReviewModal();
+    }
 
     // Scroll to section
     if (hash) {
@@ -461,6 +604,10 @@ function handleHashChange() {
 
 // Event listeners
 document.getElementById('modalClose').addEventListener('click', () => closeModal(true));
+const reviewModalCloseBtn = document.getElementById('reviewModalClose');
+if (reviewModalCloseBtn) {
+    reviewModalCloseBtn.addEventListener('click', closeReviewModal);
+}
 
 // Close modal on outside click
 document.getElementById('projectModal').addEventListener('click', (e) => {
@@ -468,11 +615,17 @@ document.getElementById('projectModal').addEventListener('click', (e) => {
         closeModal(true);
     }
 });
+document.getElementById('reviewModal')?.addEventListener('click', (e) => {
+    if (e.target.id === 'reviewModal') {
+        closeReviewModal();
+    }
+});
 
 // Close modal on ESC key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         closeModal(true);
+        closeReviewModal();
     }
 });
 
@@ -650,9 +803,11 @@ function applyFilters() {
 async function init() {
     // Load projects data first
     await loadProjects();
+    await loadReviews();
     
     // Then render and initialize
     renderProjects();
+    renderReviews();
     initializeFilters();
     document.getElementById('totalCount').textContent = projects.length;
     document.getElementById('filteredCount').textContent = projects.length; // Update filtered count initially
