@@ -755,6 +755,36 @@ a {
     gap: var(--spacing-md);
 }
 
+.reviews-source {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.profi-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-light);
+    font-weight: 600;
+    padding: 8px 16px;
+    background: rgba(0, 102, 255, 0.1);
+    border: 1px solid rgba(0, 102, 255, 0.2);
+    border-radius: var(--radius-md);
+    transition: var(--transition-smooth);
+}
+
+.profi-link:hover {
+    background: var(--primary);
+    color: white !important;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.profi-link i {
+    font-size: 0.8em;
+}
+
 .review-card {
     background: var(--surface);
     padding: var(--spacing-md);
